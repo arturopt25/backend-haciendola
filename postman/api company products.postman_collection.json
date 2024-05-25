@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "e2f83903-7c67-4596-8f14-05c150846eae",
+		"name": "api company products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13025103"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "get products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"handle\": \"cola-glitter-25-grs\",\n    \"title\" : \"Para hacer pegaduras,  papel cartón y cartulina\",\n    \"sku\": \"60870194001\",\n    \"grams\": \"1500\",\n    \"stock\": \"10413\",\n    \"price\": \"14541\",\n    \"compare\": \"12490\",\n    \"barcode\": \"5555513689\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/products/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"handle\": \"cola-glitter-25-grs\",\n    \"title\" : \"Para hacer pegaduras,  papel cartón y cartulina\",\n    \"sku\": \"60870194001\",\n    \"grams\": \"1500\",\n    \"stock\": \"10413\",\n    \"price\": \"14541\",\n    \"compare\": \"12490\",\n    \"barcode\": \"5555513689\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/products/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update products",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"handle\": \"cola-glitter-2500-grs\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/products/66453b42d93df4d497fe51cf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"66453b42d93df4d497fe51cf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete productid",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDU3M2ZhY2EzYWE4OTA0M2RhMTg4MyIsImlhdCI6MTcxNTkxNzE0NiwiZXhwIjoxNzE2MDAzNTQ2fQ.AzP0BslpqpEvlDuoyIxkoA98W9lKVOCZTU2UX5BxIuM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"handle\": \"cola-glitter-2500-grs\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/products/6646d1c633bc5934f859f7b9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"6646d1c633bc5934f859f7b9"
+							],
+							"query": [
+								{
+									"key": "x-access-token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDU3M2ZhY2EzYWE4OTA0M2RhMTg4MyIsImlhdCI6MTcxNTkxNzE0NiwiZXhwIjoxNzE2MDAzNTQ2fQ.AzP0BslpqpEvlDuoyIxkoA98W9lKVOCZTU2UX5BxIuM",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "/api/auth/signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"sek\",\n    \"email\": \"sek@gmail.com\",\n    \"password\": \"pass\",\n    \"roles\": [\"admin\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "creating user with token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDU3M2ZhY2EzYWE4OTA0M2RhMTg4MyIsImlhdCI6MTcxNTkxNzE0NiwiZXhwIjoxNzE2MDAzNTQ2fQ.AzP0BslpqpEvlDuoyIxkoA98W9lKVOCZTU2UX5BxIuM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"joe mcmillan\",\n    \"email\": \"joemc@gmail.com\",\n    \"password\": \"password2e\",\n    \"roles\": [\"admin\", \"moderator\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/auth/signin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"handle\": \"cola-glitter-25-grs\",\n    \"title\" : \"Para hacer pegaduras,  papel cartón y cartulina\",\n    \"sku\": \"60870194001\",\n    \"grams\": \"1500\",\n    \"stock\": \"10413\",\n    \"price\": \"14541\",\n    \"compare\": \"12490\",\n    \"barcode\": \"5555513689\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
